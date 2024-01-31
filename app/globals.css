@@ -1,33 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css?family=Advent%20Pro:700|Advent%20Pro:400");
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --bg-body: #112840;
+  --text-nav: #c2f3ff;
+  --text-title-paragraphe: #d6e1ff;
+  --text-paragraphe: #c2f3ff;
+  --border-bottom: #d6e1ff;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--bg-body);
+  font-family: "Advent Pro";
 }
+nav h1 {
+  color: var(--text-nav);
+}
+a {
+  color: var(--text-nav);
+}
+a:hover {
+  border-bottom: var(--border-bottom) 1px solid;
+}
+article p span {
+  color: var(--text-title-paragraphe);
+}
+article p {
+  color: var(--text-paragraphe);
+  text-align: justify;
+}
+/*  
+mode dark 
+  --bg-body: #112840;
+  --text-nav: #9eb1ff;
+  --text-title-paragraphe: #d6e1ff;
+  --text-paragraphe: #c2f3ff;
+  --border-bottom: #3e63dd;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+mode light
+    --bg-body:rgb(209, 240, 250);
+  --text-nav: rgb(58, 91, 199);
+  --text-title-paragraphe: rgb(31, 45, 92);
+  --text-paragraphe: rgb(2 132 199);
+  --border-bottom: rgb(62, 99, 221);
+*/
