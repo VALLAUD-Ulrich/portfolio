@@ -1,7 +1,6 @@
 import Image from "next/image";
+import "../app/css/globals.css";
 import Burger from "./components/burger";
-import Contact from "./components/contact";
-import "./globals.css";
 
 export default function Home() {
   return (
@@ -18,12 +17,12 @@ export default function Home() {
               </a>
             </li>
             <li className="mx-8">
-              <a className="text-2xl" href="skill">
+              <a className="text-2xl" href="#skill">
                 Compétences
               </a>
             </li>
             <li className="mr-16 ml-8">
-              <a className="text-2xl" href="/contact">
+              <a className="text-2xl" href="#contact">
                 Contact
               </a>
             </li>
@@ -94,7 +93,7 @@ export default function Home() {
         </article>
       </section>
       <section id="skill">
-        <h1 className="text-center text-4xl mb-10 h-">Compétences</h1>
+        <h1 className="text-center text-4xl mb-20 ">Compétences</h1>
         <article className="flex justify-evenly">
           <div className="flex flex-col ">
             <h3 className="text-center text-2xl ">Design</h3>
@@ -213,10 +212,35 @@ export default function Home() {
         </article>
       </section>
       <section id="contact">
-        <h1 className="text-center text-4xl mt-20 mb-20">Me Contacter</h1>
-        <Contact />
+        <h1 className="text-center text-4xl mt-20 mb-10">Me Contacter</h1>
+        <p className="text-center text-xl mb-10">
+          {" "}
+          Une idée , un projet contactez moi pour en discuter{" "}
+        </p>
+        <div className="flex justify-center mb-10">
+          <a href="https://www.linkedin.com/in/ulrich-vallaud-18b41124b/">
+            <Image
+              src="/images/linkedin.svg"
+              alt="logo linkedin"
+              width={75}
+              height={75}
+            />
+          </a>
+          <a href="mailto:ulrichvallaud@digitaluniverse.fr">
+            <Image
+              src="/images/gmail.svg"
+              alt="logo gmail"
+              width={75}
+              height={75}
+            />
+          </a>
+        </div>
       </section>
-      <footer></footer>
+      <footer>
+        <p className="m-auto text-center text-xl py-2 border-t ">
+          © 2024 Digital Universe - Ulrich Vallaud
+        </p>
+      </footer>
     </main>
   );
 }
