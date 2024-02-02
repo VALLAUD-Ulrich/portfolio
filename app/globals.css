@@ -5,10 +5,11 @@
 
 :root {
   --bg-body: #112840;
+  --bg-logo: #d6e1ff;
   --text-nav: #c2f3ff;
   --text-title-paragraphe: #d6e1ff;
   --text-paragraphe: #c2f3ff;
-  --border-bottom: #d6e1ff;
+  --border: #d6e1ff;
 }
 body {
   background-color: var(--bg-body);
@@ -17,31 +18,23 @@ body {
 nav h1 {
   color: var(--text-nav);
 }
-a {
+nav a {
   color: var(--text-nav);
 }
-a:hover {
-  border-bottom: var(--border-bottom) 1px solid;
+nav a:hover {
+  border-bottom: var(--border) 1px solid;
 }
-article p span {
+article p span,
+h1 {
   color: var(--text-title-paragraphe);
 }
-article p {
+article p,
+h3 {
   color: var(--text-paragraphe);
   text-align: justify;
 }
-/*  
-mode dark 
-  --bg-body: #112840;
-  --text-nav: #9eb1ff;
-  --text-title-paragraphe: #d6e1ff;
-  --text-paragraphe: #c2f3ff;
-  --border-bottom: #3e63dd;
-
-mode light
-    --bg-body:rgb(209, 240, 250);
-  --text-nav: rgb(58, 91, 199);
-  --text-title-paragraphe: rgb(31, 45, 92);
-  --text-paragraphe: rgb(2 132 199);
-  --border-bottom: rgb(62, 99, 221);
-*/
+.logo {
+  background-color: var(--text-title-paragraphe);
+}
+.logo-white {
+}
