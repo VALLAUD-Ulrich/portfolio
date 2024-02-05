@@ -1,221 +1,204 @@
 import Image from "next/image";
+import Headers from "../app/components/headers";
 import "../app/css/globals.css";
-import Burger from "./components/burger";
 
 export default function Home() {
   return (
     <main>
-      <header>
-        <nav className="h-12 flex justify-between items-center">
-          <div>
-            <h1 className="text-2xl ml-8">Digital Universe</h1>
-          </div>
-          <ul className="h-full flex items-center">
-            <li className="mx-8">
-              <a className="text-2xl " href="/">
-                Accueil
-              </a>
-            </li>
-            <li className="mx-8">
-              <a className="text-2xl" href="#skill">
-                Compétences
-              </a>
-            </li>
-            <li className="mr-16 ml-8">
-              <a className="text-2xl" href="#contact">
-                Contact
-              </a>
-            </li>
-          </ul>
-          <Burger />
-        </nav>
-      </header>
-      <section className="relative flex max-w-screen-xl m-auto min-h-screen ">
-        <article className="relative top-48 w-2/3">
-          <p className="mb-4">
-            <span className="text-9xl font-bold">Hello !</span>
-          </p>
-          <p className="text-4xl ">
-            Je suis <span className="text-6xl font-bold">Ulrich Vallaud</span>{" "}
-            <br />
-            Développeur Web Fullstack Javascript
-          </p>
-          <p className="text-2xl mt-4 font-medium w-4/5 justify-text text-wrap">
-            Passionné par la création d&apos;expériences en ligne en partant du
-            site vitrine aux applications complexes.
-          </p>
-        </article>
-        <article className="w-1/3">
-          <div className="border-photo relative top-1/4 left-1/4">
+      <Headers />
+      <section className="w-full laptop:flex justify-evenly flex-row-reverse desktop:flex desktopL:h-screen">
+        <article className="flex flex-col items-center">
+          <div className="mx-5">
             <Image
               src="/images/avatar.jpg"
               alt="Photo de Ulrich"
-              width={250}
-              height={250}
-              className="rounded-full"
+              width={400}
+              height={400}
+              className="rounded-full desktopL:mr-20"
             />
           </div>
-          <div className="flex justify-around relative top-1/3 left-6">
-            <a
-              className="logo text-sm px-4 border-2 border-black rounded-full "
-              href="https://github.com/VALLAUD-Ulrich"
-            >
+          <div className="flex mt-5 mb-5">
+            <a href="https://github.com/VALLAUD-Ulrich">
               <Image
                 src="/images/github-black.svg"
                 alt="logo github"
-                width={50}
-                height={50}
+                width={75}
+                height={75}
+                className="tablette:w-{150} h-{150}"
               />
             </a>
-            <a
-              className="logo text-sm px-4 border-2 border-black rounded-full"
-              href="https://www.linkedin.com/in/ulrich-vallaud-18b41124b/"
-            >
+            <a href="https://www.linkedin.com/in/ulrich-vallaud-18b41124b/">
               <Image
                 src="/images/linkedin.svg"
                 alt="logo linkedin"
-                width={50}
-                height={50}
+                width={75}
+                height={75}
+                className="logo-com"
               />
             </a>
-            <a
-              className="text-sm logo text-sm px-4 border-2 border-black rounded-full"
-              href="mailto:ulrichvallaud@digitaluniverse.fr"
-            >
+            <a href="mailto:ulrichvallaud@digitaluniverse.fr">
               <Image
                 src="/images/gmail.svg"
                 alt="logo gmail"
-                width={50}
-                height={50}
+                width={75}
+                height={75}
+                className="logo-com"
               />
             </a>
           </div>
         </article>
+        <article className="flex flex-col laptop: justify-center">
+          <h1 className="text-center text-5xl laptop:text-7xl desktopL:text-9xl">
+            Hello !{" "}
+          </h1>
+          <div className="w-full mt-5 tablette: w-9/12 mx-auto">
+            <p className="mx-auto w-11/12 text-2xl laptop:text-3xl desktopL:text-4xl w-9/12">
+              Je suis{" "}
+              <span className="text-3xl desktopL:text-6xl">Ulrich Vallaud</span>{" "}
+              <br />
+              Développeur Web Fullstack Javascript
+            </p>
+            <p className="mx-auto w-11/12 text-2xl laptop:text-3xl desktopL:text-4xl w-9/12">
+              Passionné par la création d&apos;expériences en ligne en partant
+              du site vitrine aux applications complexes.
+            </p>
+          </div>
+        </article>
       </section>
-      <section id="skill">
-        <h1 className="text-center text-4xl mb-20 ">Compétences</h1>
-        <article className="flex justify-evenly">
-          <div className="flex flex-col ">
-            <h3 className="text-center text-2xl ">Design</h3>
-            <div className="flex mt-5 items-center">
-              <Image
-                src="/images/figma.svg"
-                alt="logo figma"
-                width={45}
-                height={45}
-                className="mr-5"
-              />
-              <p className="text-xl">Figma</p>
-            </div>
-            <div className="flex mt-5 items-center">
-              <Image
-                src="/images/mockflow.svg"
-                alt="logo mockflow"
-                width={45}
-                height={45}
-                className="mr-5"
-              />
-              <p className="text-xl">Mockflow</p>
-            </div>
-            <div className="flex mt-5 items-center">
-              <Image
-                src="/images/tailwind.svg"
-                alt="logo tailwind"
-                width={45}
-                height={45}
-                className="mr-5"
-              />
-              <p className="text-xl">tailwind</p>
+      <section id="skill" className="tablette:mt-10">
+        <h1 className="mt-10 text-center text-4xl mb-5 font-bold tablette:m-auto">
+          Compétences
+        </h1>
+        <article className="tablette:flex flex-wrap justify-around">
+          <div>
+            <h3 className="text-3xl text-center my-5">Design</h3>
+            <div className="flex flex-col items-center">
+              <div className="flex items-center mb-5">
+                <Image
+                  src="/images/figma.svg"
+                  alt="logo figma"
+                  width={60}
+                  height={60}
+                  className="mr-5 "
+                />
+                <p className="text-2xl">Figma</p>
+              </div>
+              <div className="flex items-center mb-5">
+                <Image
+                  src="/images/mockflow.svg"
+                  alt="logo mockflow"
+                  width={60}
+                  height={60}
+                  className="mr-5 "
+                />
+                <p className="text-2xl">Mockflow</p>
+              </div>
+              <div className="flex items-center mb-5">
+                <Image
+                  src="/images/tailwind.svg"
+                  alt="logo tailwind"
+                  width={60}
+                  height={60}
+                  className="mr-5 "
+                />
+                <p className="text-2xl">tailwind</p>
+              </div>
             </div>
           </div>
           <div>
-            <h3 className="text-center text-2xl">Frontend</h3>
-            <div className="flex mt-5 items-center">
-              <Image
-                src="/images/react.svg"
-                alt="logo react"
-                width={45}
-                height={45}
-                className="mr-5"
-              />
-              <p className="text-xl">React</p>
-            </div>
-            <div className="flex mt-5 items-center">
-              <Image
-                src="/images/nextjs.svg"
-                alt="logo nextjs"
-                width={45}
-                height={45}
-                className="mr-5"
-              />
-              <p className="text-xl">Next.js</p>
-            </div>
-            <div className="flex mt-5 items-center">
-              <Image
-                src="/images/vue.svg"
-                alt="logo vuejs"
-                width={45}
-                height={45}
-                className="mr-5"
-              />
-              <p className="text-xl">Vue.js</p>
+            <h3 className="text-3xl text-center my-5">Frontend</h3>
+            <div className="flex flex-col items-center">
+              <div className="flex items-center mb-5">
+                <Image
+                  src="/images/react.svg"
+                  alt="logo react"
+                  width={60}
+                  height={60}
+                  className="mr-5"
+                />
+                <p className="text-2xl">React</p>
+              </div>
+              <div className="flex items-center mb-5">
+                <Image
+                  src="/images/nextjs.svg"
+                  alt="logo nextjs"
+                  width={60}
+                  height={60}
+                  className="mr-5"
+                />
+                <p className="text-2xl">Next.js</p>
+              </div>
+              <div className="flex items-center mb-5">
+                <Image
+                  src="/images/vue.svg"
+                  alt="logo vuejs"
+                  width={60}
+                  height={60}
+                  className="mr-5"
+                />
+                <p className="text-2xl">Vue.js</p>
+              </div>
             </div>
           </div>
           <div>
-            <h3 className="text-center text-2xl">Backend</h3>
-            <div>
-              <div className="flex mt-5 items-center">
+            <h3 className="text-3xl text-center my-5">Backend</h3>
+            <div className="flex flex-col items-center">
+              <div className="flex items-center mb-5">
                 <Image
                   src="/images/nodejs.svg"
                   alt="logo nodejs"
-                  width={45}
-                  height={45}
+                  width={60}
+                  height={60}
                   className="mr-5 bg-white"
                 />
-                <p className="text-xl">Node.js</p>
+                <p className="text-2xl">Node.js</p>
               </div>
-              <div className="flex mt-5 items-center">
+              <div className="flex items-center mb-5">
                 <Image
                   src="/images/postgresql.svg"
                   alt="logo postgresql"
-                  width={45}
-                  height={45}
+                  width={60}
+                  height={60}
                   className="mr-5"
                 />
-                <p className="text-xl">PostgreSQL</p>
+                <p className="text-2xl">PostgreSQL</p>
               </div>
-              <div className="flex mt-5 items-center">
+              <div className="flex items-center mb-5">
                 <Image
                   src="/images/sequelize.svg"
                   alt="logo sequelize"
-                  width={45}
-                  height={45}
+                  width={60}
+                  height={60}
                   className="mr-5"
                 />
-                <p className="text-xl">Sequelize</p>
+                <p className="text-2xl">Sequelize</p>
               </div>
             </div>
           </div>
           <div>
-            <h3 className="text-center text-2xl">Outils de développement</h3>
-            <div className="flex mt-5 items-center">
+            <h3 className="text-3xl text-center my-5">
+              Outils de développement
+            </h3>
+            <div className="flex items-center justify-center mb-5">
               <Image
                 src="/images/github.svg"
                 alt="logo git-github"
-                width={45}
-                height={45}
+                width={60}
+                height={60}
                 className="mr-5"
               />
-              <p className="text-xl">Git & GitHub</p>
+              <p className="text-2xl">Git & GitHub</p>
             </div>
           </div>
         </article>
       </section>
       <section id="contact">
-        <h1 className="text-center text-4xl mt-20 mb-10">Me Contacter</h1>
-        <p className="text-center text-xl mb-10">
+        <h1 className="text-center text-4xl font-bold tablette:mt-10">
+          Me Contacter
+        </h1>
+        <p className="text-2xl w-10/12 mx-auto my-10 text-center tablette:w-8/12">
           {" "}
-          Une idée , un projet contactez moi pour en discuter{" "}
+          Une idée , un projet ? Contactez moi pour en discuter{" "}
         </p>
         <div className="flex justify-center mb-10">
           <a href="https://www.linkedin.com/in/ulrich-vallaud-18b41124b/">
@@ -236,8 +219,20 @@ export default function Home() {
           </a>
         </div>
       </section>
+      <div className="w-{75} h-{75} ">
+        <a href="#" className="w-100 h-100">
+          <Image
+            src="/images/arrow-up.svg"
+            alt="planete"
+            width={50}
+            height={50}
+            className="-rotate-90 fixed bottom-5 right-5 z-50 cursor-pointer p-2 border-2 bg-white opacity-60 rounded"
+          />
+        </a>
+      </div>
+
       <footer>
-        <p className="m-auto text-center text-xl py-2 border-t ">
+        <p className="text-xl text-center">
           © 2024 Digital Universe - Ulrich Vallaud
         </p>
       </footer>

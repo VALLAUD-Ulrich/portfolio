@@ -7,7 +7,7 @@
   --bg-body: #112840;
   --bg-logo: #d6e1ff;
   --text-nav: #c2f3ff;
-  --text-title-paragraphe: #d6e1ff;
+  --text-strong-paragraphe: #d6e1ff;
   --text-paragraphe: #c2f3ff;
   --border: #d6e1ff;
 }
@@ -15,31 +15,32 @@ body {
   background-color: var(--bg-body);
   font-family: "Advent Pro";
 }
-nav h1 {
+header {
+  border-bottom: 1px solid var(--border);
+}
+header h1 {
+  color: var(--text-strong-paragraphe);
+}
+nav a {
   color: var(--text-nav);
 }
-nav a,
+article h1 {
+  color: var(--text-strong-paragraphe);
+}
+section p {
+  color: var(--text-paragraphe);
+}
+article span {
+  color: white;
+}
+
+#skill h1,
+#contact h1 {
+  color: var(--text-strong-paragraphe);
+}
+#skill h3 {
+  color: var(--text-strong-paragraphe);
+}
 footer p {
-  color: var(--text-nav);
-}
-nav a:hover {
-  border-bottom: var(--border) 1px solid;
-}
-article p span,
-h1 {
-  color: var(--text-title-paragraphe);
-}
-article p,
-h3 {
   color: var(--text-paragraphe);
-  text-align: justify;
-}
-#contact p {
-  color: var(--text-paragraphe);
-}
-.logo {
-  background-color: var(--text-title-paragraphe);
-}
-label span {
-  color: var(--text-title-paragraphe);
 }
