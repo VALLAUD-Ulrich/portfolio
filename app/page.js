@@ -10,7 +10,7 @@ export default function Home() {
         <article className="flex flex-col items-center">
           <div className="mx-5">
             <Image
-              src="/images/avatar.jpg"
+              src="/images/ulrich.jpg"
               alt="Photo de Ulrich"
               width={400}
               height={400}
