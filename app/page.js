@@ -18,7 +18,7 @@ export default function Home() {
             />
           </div>
           <div className="flex mt-5 mb-5">
-            <a href="https://github.com/VALLAUD-Ulrich">
+            <a href="https://github.com/VALLAUD-Ulrich" target="_blank">
               <Image
                 src="/images/github-black.svg"
                 alt="logo github"
@@ -27,7 +27,10 @@ export default function Home() {
                 className="tablette:w-{150} h-{150}"
               />
             </a>
-            <a href="https://www.linkedin.com/in/ulrich-vallaud-18b41124b/">
+            <a
+              href="https://www.linkedin.com/in/ulrich-vallaud-18b41124b/"
+              target="_blank"
+            >
               <Image
                 src="/images/linkedin.svg"
                 alt="logo linkedin"
@@ -36,7 +39,7 @@ export default function Home() {
                 className="logo-com"
               />
             </a>
-            <a href="mailto:ulrichvallaud@digitaluniverse.fr">
+            <a href="mailto:ulrichvallaud@digitaluniverse.fr" target="_blank">
               <Image
                 src="/images/gmail.svg"
                 alt="logo gmail"
@@ -201,7 +204,10 @@ export default function Home() {
           Une idée , un projet ? Contactez moi pour en discuter{" "}
         </p>
         <div className="flex justify-center mb-10">
-          <a href="https://www.linkedin.com/in/ulrich-vallaud-18b41124b/">
+          <a
+            href="https://www.linkedin.com/in/ulrich-vallaud-18b41124b/"
+            target="_blank"
+          >
             <Image
               src="/images/linkedin.svg"
               alt="logo linkedin"
